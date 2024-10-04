@@ -2,8 +2,8 @@
 
 ## Contact Information
 
+[![Website](https://img.shields.io/badge/Website-%23333333.svg?&style=for-the-badge&logo=Google%20Chrome&logoColor=white)](https://rotem154154.github.io)
 [![Hugging Face](https://img.shields.io/badge/Hugging%20Face-%23FFCC00.svg?&style=for-the-badge&logo=HuggingFace&logoColor=black)](https://huggingface.co/irotem98)
-[![GitHub](https://img.shields.io/badge/GitHub-%23333333.svg?&style=for-the-badge&logo=github&logoColor=white)](https://github.com/rotem154154)
 [![LinkedIn](https://img.shields.io/badge/LinkedIn-%230077B5.svg?&style=for-the-badge&logo=linkedin&logoColor=white)](https://linkedin.com/in/rotem-israeli-04ab10179)
 
 **Email**: [irotem98@gmail.com](mailto:irotem98@gmail.com)
