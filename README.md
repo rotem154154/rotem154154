@@ -24,12 +24,7 @@
 - Replaced Genie's ST-Transformer with a lightweight MLP to infer actions between frame pairs and applied quantization to latent frames.
 - Experimented with and replaced various components to enable real-time simulation, finding that a lightweight MLP performs similarly to large transformers, and working on the image level with EfficientViT and MobileStyleGAN exponentially increased speed.
 
-#### Video Demonstrations
-
-- [Pacman Simulation](videos/pacman1_resized.mp4)
-- [Doom Simulation 1](videos/genie_example1.mp4)
-- [Doom Simulation 2](videos/genie_example2.mp4)
-- [Doom Simulation 3](videos/genie_example3.mp4)
+![genie architecture](images/genie_architecture.png)
 
 ### Mobile Face Transformation and Manipulation App 📱
 
