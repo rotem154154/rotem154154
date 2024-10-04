@@ -34,9 +34,9 @@
 #### Video Demonstrations
 
 - [Pacman Simulation](videos/pacman1_resized.mp4)
-- [Genie Example 1](videos/genie_example1.mp4)
-- [Genie Example 2](videos/genie_example2.mp4)
-- [Genie Example 3](videos/genie_example3.mp4)
+- [Doom Simulation 1](videos/genie_example1.mp4)
+- [Doom Simulation 2](videos/genie_example2.mp4)
+- [Doom Simulation 3](videos/genie_example3.mp4)
 
 ### Mobile Face Transformation and Manipulation App 📱
 
