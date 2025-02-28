@@ -4,6 +4,17 @@
 
 ## Projects
 
+### ControlNet for Diffusion Transformers 🎨
+
+- Built a ControlNet-like module for fine-grained control over text-to-image diffusion models, extending the ControlNet-XS feedback system.
+- Evaluated against Sana's ControlNet architecture, achieving better performance across all metrics.
+- Used zero convolution layers to inject conditioning without disrupting pretrained features.
+- Implemented the architecture with efficient training, lazy data loading, and reduced memory overhead.
+
+![ControlNet Architecture](images/controlnet_architecture.png)
+![ControlNet Evaluation](images/controlnet_eval.png)
+[Video Demonstration](videos/controlnet.mp4)
+
 ### Visual Question Answering 🔍
 
 - Developed a Visual Question Answering (VQA) system by combining vision models, a connector for visual-text alignment, and a language model, inspired by LLaVA.
@@ -36,10 +47,6 @@
 
 ![StyleGAN Inversion](images/stylegan_inversion.png)
 
-*I implemented the training pipeline described in [arxiv.org/abs/2406.10601](https://arxiv.org/abs/2406.10601), which allows for high-quality reconstruction of fine image details while preserving editability by utilizing both w-latents and F-latents, ensuring effective manipulation of real image attributes even in challenging cases.*
-
----
-
 ## Professional Experience
 
 ### Research Engineer at nlpearl.ai
@@ -58,5 +65,3 @@
 - Spearheaded extensive data cleaning and preprocessing workflows to address noise and inconsistencies, ensuring high data quality for critical sonar operations.
 - Utilized neural architecture search to optimize models for specific sonar and audio tasks, with a focus on performance improvements through RBF-KAN for final layers and linear layers elsewhere.
 - Integrated state-of-the-art techniques from leading research papers and Kaggle competition winners to tackle complex sonar challenges, contributing to strategic advancements in military research.
-
----
