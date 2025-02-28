@@ -12,7 +12,7 @@
 - Implemented the architecture with efficient training, lazy data loading, and reduced memory overhead.
 
 
-<img src="images/controlnet_images.png" alt="ControlNet Evaluation" height="512"/>
+<img src="images/controlnet_images.jpg" alt="ControlNet Evaluation" height="512"/>
 <img src="images/controlnet_architecture.png" alt="ControlNet Architecture" width="500"/>
 <img src="images/controlnet_eval.png" alt="ControlNet Evaluation" height="80"/>
 
