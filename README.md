@@ -11,9 +11,9 @@
 - Used zero convolution layers to inject conditioning without disrupting pretrained features.
 - Implemented the architecture with efficient training, lazy data loading, and reduced memory overhead.
 
+[Video Demonstration](videos/controlnet.mp4)
 ![ControlNet Architecture](images/controlnet_architecture.png)
 ![ControlNet Evaluation](images/controlnet_eval.png)
-[Video Demonstration](videos/controlnet.mp4)
 
 ### Visual Question Answering 🔍
 
