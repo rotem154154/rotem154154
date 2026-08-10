@@ -97,7 +97,11 @@ Task-aware context pruning for coding agents, built on a 17-layer Qwen2.5-Coder-
 - Replaced Genie’s ST-Transformer with a quantized lightweight MLP.
 - Explored real-time simulation with compact visual representations and action models.
 
-![Genie architecture](images/genie_architecture.png)
+<picture>
+  <source type="image/webp" media="(prefers-color-scheme: dark)" srcset="images/genie_architecture_dark.webp">
+  <source media="(prefers-color-scheme: dark)" srcset="images/genie_architecture_dark.png">
+  <img src="images/genie_architecture.png" alt="World model architecture">
+</picture>
 
 [World-model demonstrations](videos/pacman1_resized.mp4) · [Example 1](videos/genie_example1.mp4) · [Example 2](videos/genie_example2.mp4) · [Example 3](videos/genie_example3.mp4)
 
