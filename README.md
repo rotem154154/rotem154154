@@ -1,68 +1,118 @@
-# Rotem Israeli - Research Engineer
+# Rotem Israeli — Multimodal AI Research Engineer
 
-[![Website](https://img.shields.io/badge/Website-%23333333.svg?&style=for-the-badge&logo=Google%20Chrome&logoColor=white)](https://rotem154154.github.io) [![Hugging Face](https://img.shields.io/badge/Hugging%20Face-%23FFCC00.svg?&style=for-the-badge&logo=HuggingFace&logoColor=black)](https://huggingface.co/irotem98)  [![LinkedIn](https://img.shields.io/badge/LinkedIn-%230077B5.svg?&style=for-the-badge&logo=linkedin&logoColor=white)](https://linkedin.com/in/rotem-israeli-04ab10179)
+[![Website](https://img.shields.io/badge/Website-%23333333.svg?&style=for-the-badge&logo=Google%20Chrome&logoColor=white)](https://rotem154154.github.io) [![Hugging Face](https://img.shields.io/badge/Hugging%20Face-%23FFCC00.svg?&style=for-the-badge&logo=HuggingFace&logoColor=black)](https://huggingface.co/irotem98) [![LinkedIn](https://img.shields.io/badge/LinkedIn-%230077B5.svg?&style=for-the-badge&logo=linkedin&logoColor=white)](https://linkedin.com/in/rotem-israeli-04ab10179)
 
-## Projects
-
-### ControlNet for Diffusion Transformers 🎨
-
-- Built a ControlNet-like module for fine-grained control over text-to-image diffusion models, extending the ControlNet-XS feedback system.
-- Evaluated against Sana's ControlNet architecture, achieving better performance across all metrics.
-- Used zero convolution layers to inject conditioning without disrupting pretrained features.
-- Implemented the architecture with efficient training, lazy data loading, and reduced memory overhead.
-
-
-<img src="images/controlnet_images.jpg" alt="ControlNet Evaluation"/>
-<img src="images/controlnet_architecture.png" alt="ControlNet Architecture" width="500"/>
-<img src="images/controlnet_eval.png" alt="ControlNet Evaluation" height="80"/>
-
-### Visual Question Answering 🔍
-
-- Developed a Visual Question Answering (VQA) system by combining vision models, a connector for visual-text alignment, and a language model, inspired by LLaVA.
-- First trained the connector and then fine-tuned the language model using LoRA.
-- Optimized feature extraction by experimenting with and combining multiple vision models, including SigLIP, MobileCLIP, DINOv2, and EfficientSAM.
-- Enhanced visual representations through dynamic high-resolution processing with LLaVA-NeXT and the s² wrapper.
-- Evaluated multiple language models (Gemma, Qwen, SmolLM, OpenELM) to improve response accuracy and system performance.
-
-![LLaVA Next](images/llava_next.png)
-
-### World Model Inspired by Google's Genie 🧞
-
-- Built an efficient world model with three components: Frame Tokenizer for visual feature extraction, Latent Action Model for inferring actions, and Dynamics Model for predicting future frames.
-- Used EfficientViT for tokenizing images into discrete latents, then decoded them into continuous features with MobileStyleGAN.
-- Replaced Genie's ST-Transformer with a lightweight MLP to infer actions between frame pairs and applied quantization to latent frames.
-- Experimented with and replaced various components to enable real-time simulation, finding that a lightweight MLP performs similarly to large transformers, and working on the image level with EfficientViT and MobileStyleGAN exponentially increased speed.
-
-![genie architecture](images/genie_architecture.png)
-
-### Mobile Face Transformation and Manipulation App 📱
-
-- Developed a real-time face transformation app using MobileStyleGAN, EfficientFormer, CLIP, and StyleGAN2.
-- Trained an encoder to inject facial features at various stages of the StyleGAN decoder, creating a detailed transformation pipeline optimized for CoreML, achieving 30fps on mobile devices.
-- Contributed to the app's success at the MobileXGenAI Hackathon hosted by Samsung Next.
-- Combined multiple losses from foundation models and facial feature extractors to ensure high-quality transformations.
-
-#### Video Demonstration
-
-- [Celebrity Look Transformation](videos/celebrityLook.mp4)
-
-![StyleGAN Inversion](images/stylegan_inversion.png)
+I build multimodal and efficient AI systems across code generation, vision-language modeling, audio, video, and on-device inference. My work spans model training, reinforcement learning, evaluation, and production serving.
 
 ## Professional Experience
 
-### Research Engineer at nlpearl.ai
+### Multimodal AI Research Engineer at Idomoo
 
-- Developed real-time systems to detect conversational pauses and suggest optimal starter sentences for AI agents using fine-tuned LLMs with specialized prediction heads.
-- Experimented with various architectures, including encoder-based and decoder-pretrained models, applying LoRA and multi-stage training to enhance prediction accuracy.
-- Designed a small language model (SLM) to generate task-specific tokens, enabling multi-task outputs from a single fine-tuned model for efficient real-time inference.
+- Built multimodal training and evaluation pipelines for code-generation and screenshot-to-webpage models using LoRA, vLLM, structured-output validation, and LLM-as-judge evaluation.
+- Developed reward-modeling and GRPO-style RL workflows for webpage aesthetics and layout quality.
+- Built and optimized production inference with vLLM and vLLM-Omni across LLM, image, and video workloads.
 
-### Research Engineer at Israeli Navy
+### Conversational AI Engineer at NLPearl
 
-- Led long-term research initiatives focused on adapting foundation models, such as EnCodec and WavTokenizer, to sonar and audio data, employing multi-stage training, freezing layers, and fine-tuning with LoRA for task-specific optimizations.
-- Prioritized large-scale research and development efforts while collaborating on additional projects across the department.
-- Trained self-supervised models, including masked autoencoders, on large amounts of unlabeled audio data and spectrograms, with a focus on scaling solutions for real-world sonar applications.
-- Applied semi-supervised learning, pseudo-labeling, and mixup techniques to improve model generalization, especially with limited labeled data.
-- Developed expert ensembles and distilled them into student models, significantly improving robustness and inference efficiency in production environments.
-- Spearheaded extensive data cleaning and preprocessing workflows to address noise and inconsistencies, ensuring high data quality for critical sonar operations.
-- Utilized neural architecture search to optimize models for specific sonar and audio tasks, with a focus on performance improvements through RBF-KAN for final layers and linear layers elsewhere.
-- Integrated state-of-the-art techniques from leading research papers and Kaggle competition winners to tackle complex sonar challenges, contributing to strategic advancements in military research.
+- Built real-time pause detection and starter-suggestion systems with fine-tuned LLMs.
+- Explored encoder and decoder architectures with LoRA and multi-stage training.
+- Designed an SLM that generates task-specific tokens for efficient multi-task inference.
+
+### Machine Learning Engineer at Israeli Navy
+
+- Adapted vision and audio models for sonar and signal-processing tasks, including EnCodec/WavTokenizer-style representations.
+- Trained self-supervised and semi-supervised objectives on large unlabeled sonar and audio datasets using masked autoencoding, JEPA, and contrastive learning.
+
+## Personal Projects
+
+### Fast Code Pruner ⚡
+
+Task-aware context pruning for coding agents, built on a 17-layer Qwen2.5-Coder-0.5B backbone with a native vLLM serving path. The pruner uses the normalized final-layer representation, removes three unnecessary attention branches, and merges rank-8 LoRA updates into dense weights during export.
+
+<picture>
+  <source type="image/webp" media="(prefers-color-scheme: dark)" srcset="images/code_pruner_architecture_dark.webp">
+  <source media="(prefers-color-scheme: dark)" srcset="images/code_pruner_architecture_dark.png">
+  <img src="images/code_pruner_architecture.png" alt="Comparison of the original Code-Pruner and Fast Code Pruner architectures">
+</picture>
+
+#### Architecture highlights
+
+- Qwen2.5-Coder layers 1–17 with a normalized 896-dimensional final representation.
+- Gated PolyNorm expands 896 → 2432 before one bidirectional fusion-attention block.
+- CRF emissions reduce 2432 → 128 → 2 for line-level keep/prune decisions.
+
+#### Validation quality
+
+| Model | Accuracy ↑ | Precision ↑ | Recall ↑ | F1 ↑ |
+| --- | ---: | ---: | ---: | ---: |
+| **fast-code-pruner** | **85.94%** | **81.49%** | **83.49%** | **82.48%** |
+| code-pruner | 84.07% | 80.02% | 80.91% | 80.46% |
+
+#### Serving performance
+
+| Model | Backend | Concurrency 1 ↑ | Concurrency 16 ↑ |
+| --- | --- | ---: | ---: |
+| **fast-code-pruner** | **vLLM 0.13.0** | **79.0 req/s** | **143.4 req/s** |
+| fast-code-pruner | Hugging Face | 16.01 req/s | 16.03 req/s |
+| code-pruner | Hugging Face | 9.83 req/s | 10.03 req/s |
+
+### ControlNet for Diffusion Transformers 🎨
+
+- Built a ControlNet-like module for fine-grained text-to-image control, extending ControlNet-XS.
+- Outperformed Sana’s ControlNet baseline across all metrics.
+- Injected conditioning with zero-convolution layers to preserve pretrained features.
+- Engineered efficient training with lazy loading and a reduced memory footprint.
+
+<picture>
+  <source type="image/webp" media="(prefers-color-scheme: dark)" srcset="images/controlnet_architecture_dark.webp">
+  <source media="(prefers-color-scheme: dark)" srcset="images/controlnet_architecture_dark.png">
+  <img src="images/controlnet_architecture.png" alt="ControlNet architecture diagram" width="900">
+</picture>
+
+| Model | FID (↓) | LPIPS (↓) | SSIM (↑) | CLIP ↑ | CLIP Aesthetic ↑ |
+| --- | ---: | ---: | ---: | ---: | ---: |
+| ControlNet | 38.78 | 0.37 | 0.33 | 0.341 | 11.42 |
+| **ControlNet-XS** | **34.38** | **0.30** | **0.43** | **0.344** | **12.39** |
+
+[ControlNet demonstration video](videos/controlnet.mp4)
+
+### Visual Question Answering 🔍
+
+- Developed a VQA pipeline inspired by LLaVA: vision encoder → connector → language model.
+- Staged training: trained the connector first, then LoRA-fine-tuned the language model.
+- Bench-tested SigLIP, MobileCLIP, DINOv2, and EfficientSAM for robust visual features.
+- Added dynamic high-resolution processing through LLaVA-NeXT and the `s²` wrapper.
+- Compared Gemma, Qwen, SmolLM, and OpenELM for answer quality.
+
+<picture>
+  <source type="image/webp" media="(prefers-color-scheme: dark)" srcset="images/llava_next_dark.webp">
+  <source media="(prefers-color-scheme: dark)" srcset="images/llava_next_dark.png">
+  <img src="images/llava_next.png" alt="LLaVA-Next architecture">
+</picture>
+
+### World Model à la Google Genie 🧞
+
+- Built a Frame Tokenizer → Latent Action Model → Dynamics Model pipeline.
+- Used EfficientViT and MobileStyleGAN for fast tokenization and decoding.
+- Replaced Genie’s ST-Transformer with a quantized lightweight MLP.
+- Explored real-time simulation with compact visual representations and action models.
+
+![Genie architecture](images/genie_architecture.png)
+
+[World-model demonstrations](videos/pacman1_resized.mp4) · [Example 1](videos/genie_example1.mp4) · [Example 2](videos/genie_example2.mp4) · [Example 3](videos/genie_example3.mp4)
+
+### Mobile Face Transformation App 📱
+
+- 🏆 First place at the Samsung Next MobileXGenAI Hackathon with real-time 30 fps face transformations on mobile.
+- Built custom encoders that inject facial features at multiple StyleGAN decoder layers.
+- Combined pixel, perceptual, and adversarial losses for robust, identity-preserving edits.
+- Used MobileStyleGAN, EfficientFormer, and CLIP for a fully on-device pipeline.
+- Supported both `w`-latents and `F`-latents for flexible facial attribute manipulation.
+
+[Celebrity Look Transformation video](videos/celebrityLook.mp4)
+
+<picture>
+  <source type="image/webp" media="(prefers-color-scheme: dark)" srcset="images/stylegan_inversion_dark.webp">
+  <source media="(prefers-color-scheme: dark)" srcset="images/stylegan_inversion_dark.png">
+  <img src="images/stylegan_inversion.png" alt="StyleGAN inversion results">
+</picture>
