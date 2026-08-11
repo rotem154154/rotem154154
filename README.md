@@ -52,7 +52,7 @@ Task-aware context pruning for coding agents, built on a 17-layer Qwen2.5-Coder-
 
 | Model | Backend | Concurrency 1 ↑ | Concurrency 16 ↑ |
 | --- | --- | ---: | ---: |
-| **fast-code-pruner** | **vLLM 0.13.0** | **79.0 req/s** | **143.4 req/s** |
+| **fast-code-pruner** | **vLLM 0.27.0** | **85.0 req/s** | **214.4 req/s** |
 | fast-code-pruner | Hugging Face | 16.01 req/s | 16.03 req/s |
 | code-pruner | Hugging Face | 9.83 req/s | 10.03 req/s |
 
